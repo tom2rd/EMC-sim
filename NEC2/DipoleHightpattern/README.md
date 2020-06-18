@@ -1,0 +1,1 @@
+#Dipole Hightpattern calculation
