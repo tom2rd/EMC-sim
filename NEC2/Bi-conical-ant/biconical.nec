@@ -1,0 +1,25 @@
+CM biconical antenna :	
+CM 		
+CM 
+CM 
+CM 
+CM 
+CE
+SY H = 2	'Height of the feed point
+SY len = 0.45	'length of the wires
+SY H_upper = 2.5	'Uppermost hieght
+SY H_lower = 1.5	'Lowermost height
+SY len_source = 0.1	'Length of the source wire.
+GW	1	19	0	0	H+len_source/2	len*0.26	0	H+len*0.97+len_source/2	0.002
+GW	2	19	0	0	H+len_source/2	-len*0.26	0	H+len*0.97+len_source/2	0.002
+GW	3	19	0	0	H-len_source/2	-len*0.26	0	H-len*0.97-len_source/2	0.002
+GW	4	19	0	0	H-len_source/2	len*0.26	0	H-len*0.97-len_source/2	0.002
+GW	5	19	-len*0.26	0	H+len*0.97+len_source/2	len*0.26	0	H+len*0.97+len_source/2	0.002
+GW	6	19	-len*0.26	0	H-len*0.97-len_source/2	len*0.26	0	H-len*0.97-len_source/2	0.002
+GW	7	3	0	0	H-len_source/2	0	0	H+len_source/2	0.002	'Feed wire.
+GE	0
+GN	-1
+EK
+EX	0	7	2	0	1	0	0
+FR	0	0	0	0	300	0
+EN
