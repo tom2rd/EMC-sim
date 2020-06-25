@@ -1,0 +1,39 @@
+CM Half Wave Dipole Comment
+CM 
+CM  1 = The wire represents "tag 1" (object 1)
+CM  9 = It is divided into 9 segments
+CM  0 -dipolarm 0 = xyz coordinates of the wire start
+CM  0 dipolar = 0 = xyz coordinates of the wire end
+CM  dr = Finally, the wire radius
+CM 
+CM  Note:
+CM  0 = linear sweep
+CM  1 = number of frequency steps (only one frequency here)
+CM  0 = both following places on the map must be empty
+CM  0
+CM  freq = start frequency
+CM  0 = step size, i.e. the width of the frequency step
+CM 
+CM 
+CM  Note:
+CM  0 = excitation by voltage source (current source would be "6")
+CM  1 = excite tag 1 ...
+CM  5 = ... in segment 5
+CM  0 = empty space on the map
+CM  1 = excitation by a real voltage of 1 volt
+CM  0 = no imaginary voltage component
+CM 
+CE
+SY freq=300	'It should work at the frequency f = 2375MHz
+SY dipolarm=300/freq/4	'Each dipole arm has the length "quarter wavelength" at
+SY dr=0.002/2	'The radius of the antenna wire is 1mm
+SY x = 0.907
+GW	1	9	0	-dipolarm*x	2	0	dipolarm*x	2	dr	'Now we have to use the dipole as wire define. It works like this:
+GM	10	1	0	0	0	3	0	-1	1
+GE	1
+LD	0	11	5	5	50
+GN	1
+EK
+EX	0	1	5	0	1	0	0	'Excitation or supply drive.
+FR	0	0	0	0	freq	0
+EN
