@@ -1,0 +1,17 @@
+CM VHA 9103    300MHz 0.5m
+CM 		See GetStarted.txt
+CM 
+CM 
+CM 
+CM 
+CE
+SY len=0.5	'Symbol: Length for WL/2
+GW	1	9	0	-len/2	2	0	len/2	2	.0001	'Wire 1, 9 segments, halve wavelength long.
+GE	1
+LD	5	1	0	0	58000000	'Wire conductivity
+GN	1
+EK
+EX	0	1	5	0	1	0	0	'Voltage source (1+j0) at wire 1 segment 5.
+FR	0	0	0	0	300	0
+NE 	0 	1 	1 	31 	3 	0 	1 	1 	1 	0.1
+EN
