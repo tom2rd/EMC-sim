@@ -1,0 +1,52 @@
+# GW data file  read and Drawlines in FreeCAD
+# Produced by Tom's Hobby 
+# https://tom2rd.sakura.ne.jp/wp
+
+import FreeCAD, Part
+from PySide import QtGui
+
+# ファイル選択GUI
+def select_file():
+    filename, _ = QtGui.QFileDialog.getOpenFileName(None, "txt", "", "Text (*.txt)")
+    return filename
+
+# データを解析する
+def parse_line(line):
+    elements = line.split()
+    type, tag, segs, x1, y1, z1, x2, y2, z2, radius = elements
+
+    return {
+        'type': type,
+        'tag': tag,
+        'segs': segs,
+        'start': (float(x1), float(y1), float(z1)),
+        'end': (float(x2), float(y2), float(z2)),
+        'radius': float(radius),
+    }
+
+# データから線を描く
+def draw_line(data):
+    start = FreeCAD.Vector(data['start'])
+    end = FreeCAD.Vector(data['end'])
+
+    line = Part.makeLine(start, end)
+    Part.show(line)
+
+# データを読み込む
+
+filename = select_file()
+
+if filename:
+    print(f"Selected file: {filename}")
+    with open(filename, 'r') as f:
+      lines = f.readlines()
+
+    # 各行を解析し、描画する
+    for line in lines:
+       data = parse_line(line)
+       draw_line(data)
+
+else:
+
+    print("No file selected")
+
