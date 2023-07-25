@@ -5,3 +5,8 @@
   Bode Nyquist線図を書いてみる
 - [Sympy-Control-TransferFunction.ipynb](https://github.com/tom2rd/EMC-sim/blob/master/impedance.py/Laplace-impedance/Sympy-Control-TransferFunction.ipynb)
   sympy で伝達関数を作って、ボード線図　過渡応答を見る
+
+
+
+#　関連HP  
+https://tom2rd.sakura.ne.jp/wp/2023/07/26/post-13277/
