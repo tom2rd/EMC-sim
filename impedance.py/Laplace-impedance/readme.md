@@ -10,6 +10,10 @@
 - [impedance定数の予測.ipynb](https://github.com/tom2rd/EMC-sim/blob/master/impedance.py/Laplace-impedance/impedance%E5%AE%9A%E6%95%B0%E3%81%AE%E4%BA%88%E6%B8%AC.ipynb)  
   CSVで測定値を読み込んで、impedance.pyの機能を使って等価回路の定数を予測　艇庫の場合
 
+# 等価回路の周波数応答などの計算例
+- EquivalentCircuit-Capacitor-Sympy.ipynb
+- EquivalentCircuit-Capacitor2-Sympy.ipynb
+- EquivalentCircuit-Resistor-Sympy.ipynb
 
 # SympyでLatexを出力
 - [sympylatex.ipynb](https://github.com/tom2rd/EMC-sim/blob/master/impedance.py/Laplace-impedance/sympylatex.ipynb)
