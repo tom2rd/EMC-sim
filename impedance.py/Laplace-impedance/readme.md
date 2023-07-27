@@ -11,5 +11,9 @@
   CSVで測定値を読み込んで、impedance.pyの機能を使って等価回路の定数を予測　艇庫の場合
 
 
+# SympyでLatexを出力
+- [sympylatex.ipynb](https://github.com/tom2rd/EMC-sim/blob/master/impedance.py/Laplace-impedance/sympylatex.ipynb)
+  StmPyで作った式をLatexで出力
+
 # 関連HP  
 https://tom2rd.sakura.ne.jp/wp/2023/07/26/post-13277/  
